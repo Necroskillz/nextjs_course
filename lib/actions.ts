@@ -47,6 +47,7 @@ export const createPitch = async (
       id: result._id,
     };
   } catch (error) {
+    console.error(error);
     return {
       status: "ERROR",
       error: "Failed to create startup",

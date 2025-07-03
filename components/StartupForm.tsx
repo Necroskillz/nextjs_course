@@ -7,7 +7,6 @@ import MDEditor from "@uiw/react-md-editor";
 import { Button } from "./ui/button";
 import { Send } from "lucide-react";
 import { formSchema } from "@/lib/validation";
-import { writeClient } from "@/sanity/lib/write-client";
 import { toast } from "sonner";
 import { z } from "zod";
 import { useRouter } from "next/navigation";
@@ -60,7 +59,7 @@ const StartupForm = () => {
     }
   };
 
-  const [state, formAction, isPending] = useActionState(handleFormSubmit, {
+  const [, formAction, isPending] = useActionState(handleFormSubmit, {
     errors: {},
     status: "INITIAL",
   });

@@ -11,7 +11,7 @@ export const formSchema = z.object({
       try {
         const res = await fetch(url, { method: "HEAD" });
         return res.headers.get("content-type")?.startsWith("image/");
-      } catch (error) {
+      } catch {
         return false;
       }
     }),
