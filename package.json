@@ -6,23 +6,60 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "typegen": "sanity schema extract --path=./sanity/extract.json && sanity typegen generate"
+  },
+  "pnpm": {
+    "overrides": {
+      "@babel/types": "7.27.7",
+      "next": "$next",
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
   },
   "dependencies": {
+    "@radix-ui/react-avatar": "^1.1.10",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@sanity/client": "^7.6.0",
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^3.96.0",
+    "@sentry/nextjs": "^9.34.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "@uiw/react-md-editor": "^4.0.7",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "dataloader": "^2.2.3",
+    "easymde": "^2.20.0",
+    "import-in-the-middle": "^1.14.2",
+    "lucide-react": "^0.525.0",
+    "markdown-it": "^14.1.0",
+    "next": "canary",
+    "next-auth": "beta",
+    "next-sanity": "^9.12.0",
+    "next-themes": "^0.4.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.4"
+    "require-in-the-middle": "^7.5.2",
+    "sanity": "^3.96.0",
+    "sanity-plugin-markdown": "^5.1.1",
+    "server-only": "^0.0.1",
+    "sonner": "^2.0.6",
+    "styled-components": "^6.1.19",
+    "tailwind-merge": "^3.3.1",
+    "zod": "^3.25.71"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/markdown-it": "^14.1.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "tw-animate-css": "^1.3.4",
+    "typescript": "^5"
   },
   "packageManager": "pnpm@10.9.0+sha512.0486e394640d3c1fb3c9d43d49cf92879ff74f8516959c235308f5a8f62e2e19528a65cdc2a3058f587cde71eba3d5b56327c8c33a97e4c4051ca48a10ca2d5f"
 }
